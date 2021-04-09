@@ -3,9 +3,42 @@
 <head><title>dangol</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="main.css">
+<script>
+function LinksSetColor(color){
+  var alist=document.querySelectorAll('a');
+  var i= 0;
+  while(i<alist.length){
+    alist[i].style.color=color;
+    i=i+1;
+  }
+}
+function BodySetColor(color){
+  document.querySelector('body').style.color=color;
+}
+function BodySetBackgroundColor(color){
+  document.querySelector('body').style.backgroundColor=color;
+}
+function handler(self){
+ var target=document.querySelector('body');
+  if(self.value === 'night'){
+    Body.setBackgroundColor('black');
+    Body.setColor('white');
+    self.value = 'day';
+    Links.setColor('powderblue');
+  }else{
+    Body.setBackgroundColor('white');
+    Body.setColor('black');
+    self.value = 'night';
+    Links.setColor('blue');
+  }
+}
+</script>
 </head>
 <body>
   <h3>단골</h3>
+  <input type="button" value="night" onclick="
+ handler(this);
+    ">
 <div id="a1">
   <div>
     <ul>
@@ -34,16 +67,20 @@
     </ul>
   </div>
   <div id="a2">
-   <p>10</p><p>aaaaaaa</p><p>bbbbbb</p><p>cccccc</p><p>dddddd</p><p>eeeeeee</p>
-   <p>9</p><p>aaaaaaa</p><p>bbbbbb</p><p>cccccc</p><p>dddddd</p><p>eeeeeee</p>
-   <p>8</p><p>aaaaaaa</p><p>bbbbbb</p><p>cccccc</p><p>dddddd</p><p>eeeeeee</p>
-   <p>7</p><p>aaaaaaa</p><p>bbbbbb</p><p>cccccc</p><p>dddddd</p><p>eeeeeee</p>
-   <p>6</p><p>aaaaaaa</p><p>bbbbbb</p><p>cccccc</p><p>dddddd</p><p>eeeeeee</p>
-   <p>5</p><p>aaaaaaa</p><p>bbbbbb</p><p>cccccc</p><p>dddddd</p><p>eeeeeee</p>
-   <p>4</p><p>aaaaaaa</p><p>bbbbbb</p><p>cccccc</p><p>dddddd</p><p>eeeeeee</p>
-   <p>3</p><p>aaaaaaa</p><p>bbbbbb</p><p>cccccc</p><p>dddddd</p><p>eeeeeee</p>
-   <p>2</p><p>aaaaaaa</p><p>bbbbbb</p><p>cccccc</p><p>dddddd</p><p>eeeeeee</p>
-   <p>1</p><p>aaaaaaa</p><p>bbbbbb</p><p>cccccc</p><p>dddddd</p><p>eeeeeee</p>
-  </div>
+    <script>
+    var ccc=['10','9','8','7','6','5','4','3','2','1'];
+    j=0;
+    while(j<ccc.length){
+      document.write('<p>'+ccc[j]+'</p>');
+      j=j+1;
+    i=0;
+    var bbb=['1','2','3','4','5'];
+    while(i<bbb.length){
+        document.write('<p>'+bbb[i]+'</p>');
+        i=i+1;
+      }
+    }
+    </script>
+ </div>
  </div>
 </html>
